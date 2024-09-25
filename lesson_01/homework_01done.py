@@ -79,3 +79,5 @@ first_book = 8
 second_book = first_book + 2
 third _book = (first_book / 2) + (second_book / 2)
 print(first_book, second_book, third_book) 
+
+#Some changes
