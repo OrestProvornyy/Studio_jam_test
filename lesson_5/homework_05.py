@@ -46,10 +46,20 @@ car_data = {
 }
 
 
-def search_criteria(year, engine, price):
-  print("....")
+def find_cars(car_data, search_criteria):
+  filtered_cars = sorted(
+    [(car, details) for car, details in car_data.items()
+     if details[1] >= search_criteria[0] and  # Рік >=
+     details[2] >= search_criteria[1] and  # Об'єм двигуна >=
+     details[4] <= search_criteria[2]],  # Ціна <=
+    key=lambda x: x[1][4]  # Сортування за ціною
+  )
+
+
+  for car, details in filtered_cars[:5]:
+    print(f"{car}: {details}")
 
 
 
-search_criteria = (2017, 1.6, 36000)
-search_criteria = (2017, 1.6, 36000)
+search_criteria = (2015, 1.6, 36000)
+find_cars(car_data, search_criteria)
