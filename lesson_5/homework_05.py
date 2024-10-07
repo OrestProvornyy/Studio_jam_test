@@ -52,3 +52,4 @@ def search_criteria(year, engine, price):
 
 
 search_criteria = (2017, 1.6, 36000)
+search_criteria = (2017, 1.6, 36000)
