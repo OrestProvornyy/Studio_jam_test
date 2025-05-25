@@ -316,6 +316,10 @@ def verify_major_city_input_visible(driver):
     except Exception as e:
         print(f"❌ Error while verifying city input or Next button: {e}")
 
+def something(driver):
+    x = 21
+    return x
+
 def test_login_and_user_flow_flow(driver, base_url):
     open_main_page(driver, base_url)
     handle_ngrok_warning(driver)
